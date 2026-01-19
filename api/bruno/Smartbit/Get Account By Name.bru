@@ -1,0 +1,24 @@
+meta {
+  name: Get Account By Name
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://127.0.0.1:3333/accounts?name=Dominic Toreto
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: Dominic Toreto
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY4ODI4MzU2LCJleHAiOjE3Njk0MzMxNTZ9.XxdwNJWNt6VJXUhoHhUvQKNjpSq2_FK6xZehwUGJR0I
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

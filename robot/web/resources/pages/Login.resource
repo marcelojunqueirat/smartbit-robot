@@ -3,7 +3,7 @@ Documentation    Ações e elementos da página de Login
 
 Variables    ../Env.py
 
-Library          Browser
+Library      Browser
 
 *** Keywords ***
 Go to login page

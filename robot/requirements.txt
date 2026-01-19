@@ -1,6 +1,9 @@
 Faker==40.1.2
 psycopg2==2.9.11
+python-dotenv==1.2.1
 robotframework==7.4.1
+robotframework-appiumlibrary==3.2.1
 robotframework-browser==19.12.3
 robotframework-jsonlibrary==0.5
-python-dotenv==1.2.1
+robotframework-requests==0.9.7
+

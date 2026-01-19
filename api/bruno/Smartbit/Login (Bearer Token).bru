@@ -1,0 +1,23 @@
+meta {
+  name: Login (Bearer Token)
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:3333/sessions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "sac@smartbit.com",
+    "password": "pwd123"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

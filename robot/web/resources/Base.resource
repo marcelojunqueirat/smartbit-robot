@@ -5,8 +5,8 @@ Variables    Env.py
 
 Library      Browser
 Library      JSONLibrary
-Library      libs/Account.py
-Library      libs/Database.py
+Library      ../../libs/Account.py
+Library      ../../libs/Database.py
 
 Resource    pages/Landing.resource
 Resource    pages/Welcome.resource
@@ -25,14 +25,14 @@ ${ADMIN_PASS}=     pwd123
 
 *** Keywords ***
 Start session
-    New Browser  browser=chromium  headless=False
+    New Browser  browser=${BROWSER}  headless=${HEADLESS}
     New Page     ${BASE_URL}
 
 Get JSON fixture
     [Arguments]    ${file_name}    ${scenario}
     
     ${data}=    Load Json From File    
-    ...    ${EXECDIR}/resources/fixtures/${file_name}.json    
+    ...    ${CURDIR}/fixtures/${file_name}.json    
     ...    encoding=utf-8
     
     RETURN    ${data}[${scenario}]
